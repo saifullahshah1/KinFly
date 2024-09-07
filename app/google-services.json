@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590809276807",
+    "project_id": "kinfly-2fa3d",
+    "storage_bucket": "kinfly-2fa3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590809276807:android:4512a422b0d90a3de7f322",
+        "android_client_info": {
+          "package_name": "com.revoio.kinfly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-b_VJSvYi23ZT33tnvrLD7yh0E-ch4-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
