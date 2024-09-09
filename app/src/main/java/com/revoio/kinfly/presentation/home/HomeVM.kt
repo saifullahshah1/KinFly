@@ -28,4 +28,8 @@ class HomeVM : ViewModel() {
         return dbRepo.getSimpleMessageReference()
     }
 
+    fun signOut(){
+        repo.signOutUser()
+    }
+
 }

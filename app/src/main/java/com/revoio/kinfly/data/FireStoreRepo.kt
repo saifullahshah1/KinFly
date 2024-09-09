@@ -18,9 +18,9 @@ class FireStoreRepo {
     private val fireStoreObj : FirebaseFirestore = Firebase.firestore
     private lateinit var messageReceivingListener : ListenerRegistration
 
-    fun saveUserData(username: String, email: String, userId: String, callBack: (Boolean, String?) -> Unit) {
-        val userData = UserData(userId, email, username )
-        val userDBRef = fireStoreObj.collection("users").document(userId)
+    fun saveUserData(username: String, email: String, contacts : List<String>,  userId: String, callBack: (Boolean, String?) -> Unit) {
+        val userData = UserData(userId, email, username , contacts)
+        val userDBRef = fireStoreObj.collection("user").document(userId)
 
         userDBRef.set(userData).addOnSuccessListener {
             callBack(true, null)

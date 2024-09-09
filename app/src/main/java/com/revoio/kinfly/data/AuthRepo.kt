@@ -33,9 +33,11 @@ class AuthRepo {
     ) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
+                val tempContactList : List<String> = listOf()
                 fireStoreRepo.saveUserData(
                     userName,
                     email,
+                    tempContactList,
                     getCurrentUserId() ?: ""
                 ) { response, error ->
                     if (response) {
@@ -56,6 +58,10 @@ class AuthRepo {
 
     private fun getCurrentUserId(): String? {
         return getCurrentLoggedUser()?.uid
+    }
+
+    fun signOutUser(){
+        firebaseAuth.signOut()
     }
 
 }

@@ -10,41 +10,48 @@
         android:id="@+id/messageTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Show message here"
         android:background="#666666"
+        android:text="Show message here"
         android:textColor="#ffffff"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-    android:layout_marginTop="80dp"
         android:id="@+id/uIdTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="UID"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageTxt"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
+
     <TextView
         android:id="@+id/emailTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uIdTV"
-        />
-        <Button
+        app:layout_constraintTop_toBottomOf="@+id/uIdTV" />
+
+    <Button
         android:id="@+id/sendMessageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Message"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-        />
 
+        app:layout_constraintBottom_toTopOf="@+id/signoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="signOutBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
