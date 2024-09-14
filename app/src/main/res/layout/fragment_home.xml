@@ -10,12 +10,28 @@
         android:id="@+id/messageTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:background="#666666"
-        android:text="Show message here"
+        android:text="Message: "
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/messageValTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#666666"
+        android:text="Show message here:"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/uIdTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
 
     <TextView
         android:id="@+id/uIdTV"
@@ -34,12 +50,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uIdTV" />
 
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textmessageTIETxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTV"
+        app:layout_constraintBottom_toTopOf="@id/sendMessageBtn"
+        />
+
     <Button
         android:id="@+id/sendMessageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Message"
-
         app:layout_constraintBottom_toTopOf="@+id/signoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

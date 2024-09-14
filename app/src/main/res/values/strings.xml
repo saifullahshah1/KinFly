@@ -2,4 +2,9 @@
     <string name="app_name">KinFly</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name_caps">KINFLY</string>
+    <string name="live_updates_images_and_reminders_from_your_family_and_friends">Live updates, images and reminders from your family and friends.</string>
+    <string name="get_started">Get Started</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
 </resources>

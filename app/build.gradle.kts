@@ -60,8 +60,12 @@ dependencies {
     /** firebase */
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
-    implementation("com.google.firebase:firebase-firestore")
+    implementation(libs.google.firebase.firestore)
+
     /** for some duplication error */
     implementation(libs.guava)
+
+    /** dimens */
+    implementation (libs.sdp.android)
 
 }

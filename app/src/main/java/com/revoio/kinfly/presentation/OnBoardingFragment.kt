@@ -30,10 +30,10 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun handleClicks() {
-        binding.logInBtn.setOnOneClickListener {
+        binding.loginBtnTV.setOnOneClickListener {
             findNavController().navigate(R.id.logInFragment)
         }
-        binding.signUpBtn.setOnOneClickListener {
+        binding.nextBtnV.setOnOneClickListener {
             findNavController().navigate(R.id.signUpFragment)
         }
     }
