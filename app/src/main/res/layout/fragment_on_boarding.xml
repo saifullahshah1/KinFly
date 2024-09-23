@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".presentation.OnBoardingFragment">
+    tools:context=".presentation.onboarding.OnBoardingFragment">
 
     <ImageView
         android:id="@+id/mainIV"
@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="@dimen/_42sdp"
         android:layout_marginTop="@dimen/_70sdp"
         android:layout_marginBottom="@dimen/_16sdp"
-        android:src="@drawable/ic_inboarding"
+        android:src="@drawable/ic_onboarding"
         app:layout_constraintBottom_toTopOf="@+id/titleTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

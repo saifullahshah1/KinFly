@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_2sdp"
+    android:paddingBottom="@dimen/_20sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_9sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aqua">
+
+            <View
+                android:id="@+id/dataValidityV"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:background="@color/dull_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/dataValidityIV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginVertical="@dimen/_19sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/ic_invalid_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dataValidityTitleTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/error_occurred"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toStartOf="@id/cancelIV"
+                app:layout_constraintStart_toEndOf="@+id/dataValidityIV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dataValidityDescTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/poppins"
+                android:gravity="start"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="@string/wrong_password_or_email_kindly_enter_the_correct_password_and_email"
+                android:textColor="@color/dull_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@id/cancelIV"
+                app:layout_constraintStart_toEndOf="@+id/dataValidityIV"
+                app:layout_constraintTop_toBottomOf="@+id/dataValidityTitleTV" />
+
+            <ImageView
+                android:id="@+id/cancelIV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="@dimen/_6sdp"
+                android:src="@drawable/ic_cancel_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

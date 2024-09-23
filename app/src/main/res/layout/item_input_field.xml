@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/itemV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="@drawable/bg_light_grey_20_rounded_10"
+        app:layout_constraintBottom_toBottomOf="@+id/itemIET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemIET" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/itemIET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="@android:color/transparent"
+        android:hint="@string/enter_text"
+        android:maxLines="1"
+        android:textColorHint="@color/dark_grey"
+        android:elevation="@dimen/_1sdp"
+        android:textColor="@color/black"
+        android:paddingVertical="@dimen/_14sdp"
+        android:paddingStart="@dimen/_18sdp"
+        android:paddingEnd="@dimen/_4sdp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/itemIV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/itemIV"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_email"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemIET"
+        app:layout_constraintEnd_toEndOf="@id/itemV"
+        android:layout_marginStart="@dimen/_4sdp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/itemIET"
+        app:layout_constraintTop_toTopOf="@+id/itemIET" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

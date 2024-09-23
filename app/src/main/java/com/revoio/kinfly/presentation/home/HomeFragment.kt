@@ -6,13 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.FirebaseFirestoreException
 import com.revoio.kinfly.R
 import com.revoio.kinfly.databinding.FragmentHomeBinding
-import com.revoio.kinfly.utils.debug
-import com.revoio.kinfly.utils.setOnOneClickListener
-
+import com.revoio.kinfly.presentation.setOnOneClickListener
 
 
 class HomeFragment : Fragment() {

@@ -9,6 +9,14 @@
     <color name="app_bg">#FCFCFC</color>
 
     <color name="dark_grey">#929292</color>
+    <color name="light_grey_20">#33C4C4C4</color>
+    <color name="light_grey">#CBCBCB</color>
+    <color name="dull_grey">#C8C5C5</color>
+    <color name="aqua">#242C32</color>
     <color name="dull_black">#252525</color>
+    <color name="dull_red">#F04349</color>
+
+    <color name="bright_yellow">#FFD21F</color>
+
 
 </resources>

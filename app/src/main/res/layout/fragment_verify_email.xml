@@ -1,102 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".presentation.auth.login.LogInFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.auth.verify_email.VerifyEmailFragment">
 
     <TextView
         android:id="@+id/titleTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_77sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_37sdp"
         android:ellipsize="end"
         android:fontFamily="@font/nunito_sans_extrabold"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="@string/welcome_back"
+        android:text="@string/verify_email"
         android:textColor="@color/black"
         android:textSize="@dimen/_28sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        />
+<TextView
         android:id="@+id/descTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_1sdp"
         android:ellipsize="end"
         android:fontFamily="@font/nunito_sans_light"
         android:gravity="center"
         android:includeFontPadding="false"
         android:maxLines="2"
-        android:text="@string/log_in_to_access_your_account"
+        android:singleLine="false"
+        android:text="@string/please_check_email_and_verify_your_email_via_the_link_given_in_the_email"
         android:textColor="@color/dark_grey"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_11sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTV"
+        />
 
-
-    <include
-        android:id="@+id/emailItemV"
-        layout="@layout/item_input_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintVertical_bias="0.4"
-        android:layout_marginBottom="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@+id/passwordItemV"
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_verify_email"
+android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@+id/doneBtnTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descTV"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/descTV" />
 
-    <include
-        android:id="@+id/passwordItemV"
-        layout="@layout/item_input_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@+id/forgetPasswordTV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailItemV" />
 
 
     <TextView
-        android:id="@+id/forgetPasswordTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_13sdp"
-        android:ellipsize="end"
-        android:fontFamily="@font/nunito_sans"
-        android:gravity="end"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:paddingHorizontal="@dimen/_2sdp"
-        android:paddingVertical="@dimen/_4sdp"
-        android:singleLine="true"
-        android:text="@string/forgot_password"
-        android:textColor="@color/primary"
-        android:textSize="@dimen/_9sdp"
-        app:layout_constraintBottom_toTopOf="@+id/loginBtnTV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordItemV" />
-
-
-    <TextView
-        android:id="@+id/loginBtnTV"
+        android:id="@+id/doneBtnTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_23sdp"
@@ -111,15 +74,15 @@
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_12sdp"
         android:singleLine="true"
-        android:text="@string/login"
+        android:text="@string/done"
         android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
-        app:layout_constraintBottom_toTopOf="@+id/signupDescTV"
+        app:layout_constraintBottom_toTopOf="@+id/resendDescTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/signupDescTV"
+        android:id="@+id/resendDescTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_16sdp"
@@ -129,17 +92,17 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="@string/don_t_have_an_account"
+        android:text="@string/didn_t_receive_any_email"
         android:textColor="@color/black"
         android:textSize="@dimen/_9sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/signupBtnTV"
+        app:layout_constraintEnd_toStartOf="@+id/resendBtnTV"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/signupBtnTV"
+        android:id="@+id/resendBtnTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_3sdp"
@@ -149,13 +112,12 @@
         android:includeFontPadding="false"
         android:maxLines="1"
         android:singleLine="true"
-        android:text="@string/signup"
-        android:textColor="@color/primary"
+        android:text="@string/resend_again"
+        android:textColor="@color/secondary"
         android:textSize="@dimen/_9sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/signupDescTV"
+        app:layout_constraintBottom_toBottomOf="@+id/resendDescTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/signupDescTV"
-        app:layout_constraintTop_toTopOf="@+id/signupDescTV" />
-
+        app:layout_constraintStart_toEndOf="@+id/resendDescTV"
+        app:layout_constraintTop_toTopOf="@+id/resendDescTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

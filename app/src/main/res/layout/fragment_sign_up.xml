@@ -4,68 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".presentation.auth.signup.SignUpFragment">
 
     <TextView
-        android:id="@+id/userNameTV"
-        android:layout_width="match_parent"
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Username"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_77sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans_extrabold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/signup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_28sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/userNameIET"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/descTV"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans_light"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="@string/create_your_free_account_now"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_12sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userNameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+
+    <include
+        android:id="@+id/usernameItemV"
+        layout="@layout/item_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/emailItemV"
+        app:layout_constraintTop_toBottomOf="@+id/descTV"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <include
+        android:id="@+id/emailItemV"
+        layout="@layout/item_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/numberItemV"
+        app:layout_constraintTop_toBottomOf="@+id/usernameItemV" />
+
+    <include
+        android:id="@+id/numberItemV"
+        layout="@layout/item_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordItemV"
+        app:layout_constraintTop_toBottomOf="@+id/emailItemV" />
+
+    <include
+        android:id="@+id/passwordItemV"
+        layout="@layout/item_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/termsConditionTV"
+        app:layout_constraintTop_toBottomOf="@+id/numberItemV" />
+
+    <RadioButton
+        android:id="@+id/termsConditionBtnRB"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:background="@drawable/selector_terms_and_condition_white_to_primary"
+        android:button="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/termsConditionTV"
+        app:layout_constraintEnd_toStartOf="@+id/termsConditionTV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/termsConditionTV" />
 
 
     <TextView
-        android:id="@+id/emailTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userNameIET" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailIET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailTV" />
-
-    <TextView
-        android:id="@+id/passwordTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailIET" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passwordIET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordTV" />
-
-    <Button
-        android:id="@+id/signupBtn"
+        android:id="@+id/termsConditionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SignUp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/_2sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:singleLine="true"
+        android:text="@string/by_checking_the_box_you_agree_to_our_terms_and_conditions"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toTopOf="@+id/signupBtnTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordIET" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/termsConditionBtnRB"
+        app:layout_constraintTop_toBottomOf="@+id/passwordItemV" />
 
+    <TextView
+        android:id="@+id/signupBtnTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_23sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:background="@drawable/bg_primary_round_10"
+        android:elevation="@dimen/_1sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:singleLine="true"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@+id/loginDescTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/loginDescTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/already_have_an_account"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/loginBtnTV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/loginBtnTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/login"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginDescTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginDescTV"
+        app:layout_constraintTop_toTopOf="@+id/loginDescTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

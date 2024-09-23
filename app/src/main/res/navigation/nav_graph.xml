@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_log_in" />
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.revoio.kinfly.presentation.OnBoardingFragment"
+        android:name="com.revoio.kinfly.presentation.onboarding.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" />
     <fragment
@@ -25,4 +25,9 @@
         android:name="com.revoio.kinfly.presentation.auth.signup.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/verifyEmailFragment"
+        android:name="com.revoio.kinfly.presentation.auth.verify_email.VerifyEmailFragment"
+        android:label="fragment_verify_email"
+        tools:layout="@layout/fragment_verify_email" />
 </navigation>

@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.revoio.kinfly.R
-import com.revoio.kinfly.presentation.MainActivity
+import com.revoio.kinfly.presentation.activity.MainActivity
 
 
 class MainWidget : AppWidgetProvider() {

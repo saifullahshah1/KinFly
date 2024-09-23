@@ -17,7 +17,7 @@ import com.google.firebase.firestore.firestore
 import com.revoio.kinfly.presentation.auth.MessageData
 import com.revoio.kinfly.presentation.auth.UserData
 import com.revoio.kinfly.presentation.widget.MainWidget
-import com.revoio.kinfly.utils.debug
+import com.revoio.kinfly.core.utils.debug
 import java.util.UUID
 
 class FireStoreRepo {
@@ -25,8 +25,8 @@ class FireStoreRepo {
     private val fireStoreObj : FirebaseFirestore = Firebase.firestore
     private lateinit var messageReceivingListener : ListenerRegistration
 
-    fun saveUserData(username: String, email: String, contacts : List<String>,  userId: String, callBack: (Boolean, String?) -> Unit) {
-        val userData = UserData(userId, email, username , contacts)
+    fun saveUserData(username: String, email: String, phoneNumber: String, contacts : List<String>,  userId: String, callBack: (Boolean, String?) -> Unit) {
+        val userData = UserData(userId, email, username , phoneNumber , contacts)
         val userDBRef = fireStoreObj.collection("user").document(userId)
 
         userDBRef.set(userData).addOnSuccessListener {

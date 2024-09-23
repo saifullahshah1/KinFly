@@ -1,4 +1,4 @@
-package com.revoio.kinfly.presentation
+package com.revoio.kinfly.presentation.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.revoio.kinfly.R
 import com.revoio.kinfly.databinding.FragmentOnBoardingBinding
-import com.revoio.kinfly.utils.setOnOneClickListener
+import com.revoio.kinfly.presentation.setOnOneClickListener
 
 class OnBoardingFragment : Fragment() {
 
